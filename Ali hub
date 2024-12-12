@@ -1,0 +1,75 @@
+
+local player = game.Players.LocalPlayer local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))() local Window = OrionLib:MakeWindow({Name = "Uzbekistan 🇺🇿 ❤️ (Ali hub ) Yaratuvchi Ali🇺🇿 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"}) --[[ Name = - The name of the UI. HidePremium = - Whether or not the user details shows Premium status or not. SaveConfig = - Toggles the config saving in the UI. ConfigFolder = - The name of the folder where the configs are saved. IntroEnabled = false - Whether or not to show the intro animation. IntroText = - Text to show in the intro animation. IntroIcon = - URL to the image you want to use in the intro animation. Icon = - URL to the image you want displayed on the window. CloseCallback = - Function to execute when the window is closed. ]] local Tab = Window:MakeTab({ Name = "1 boʻlim", Icon = "rbxassetid://4483345998", PremiumOnly = false }) --[[ Name = - The name of the tab. Icon = - The icon of the tab. PremiumOnly = - Makes the tab accessible to Sirus Premium users only. ]] local Section = Tab:AddSection({ Name = "LocalPlayer" }) --[[ Name = - The name of the section. ]] OrionLib:MakeNotification({ Name = "Welcome!", Content = "Welcome to my hub!", Image = "rbxassetid://4483345998", Time = 5 }) --[[ Title = - The title of the notification. Content = - The content of the notification. Image = - The icon of the notification. Time = - The duration of the notfication. ]] Tab:AddButton({ Name = "Tez Yugurish(XATOLIK YUZ BERDI❌)", Callback = function() player.Character.Humanoid.speed = 500 end }) --[[ Name = - The name of the button. Callback = - The function of the button. ]] Tab:AddButton({ Name = "Juda Balandga Sakrash", Callback = function() player.Character.Humanoid.JumpPower = 100 end }) --[[Tab:AddButton({ Name ="Tez orada", Callback = - The function of the button. ]] Tab:AddButton({ Name = "Pas Gravitatsiya", Callback = function() game.Workspace.Gravity = 10 end }) --[[ Name = - The name of the button. Callback = - The function of the button. ]] --[[ Name = - The name of the button. Callback = - The function of the button. ]]Tab:AddButton({
+	Name = "Gravitatsiyni 0ga tushurish",
+	Callback = function() game.Workspace.Gravity = 0 end })local Tab = Window:MakeTab({
+	Name = "2 boʻlim✨",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]Tab:AddSlider({
+	Name = "TEZLIK⚡",
+	Min = 0,
+	Max = 0,
+	Default = (0),
+	Color = Color3.fromRGB(0,0,0),
+	Increment = 1,
+	ValueName = "Tez Orada ishga tushadi⚡",
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - Walkspeed.
+Min = <number> - The minimal value of the slider.
+Max = <number> - The maxium value of the slider.
+Increment = <number> - How much the slider will change value when dragging.
+Default = <number> - The default value of the slider.
+ValueName = <string> - The text after the value number.
+Callback = <function> - The function of the slider.
+]]Slider:Set(2)Tab:AddParagraph("Hamkor Orion library 🤝","Created by AliStudio")Tab:AddButton({
+	Name = "Tez Kunlarda⚡",
+	Callback = function()
+      		print("button hold")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]local Tab = Window:MakeTab({
+	Name = "Tez orada",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - Tez Orada⚡.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]Tab:AddButton({
+	Name = "tezlikni norm qilish",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+Tab:AddButton({
+	Name = "Tez Orada ⚡",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
